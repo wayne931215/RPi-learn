@@ -27,6 +27,7 @@ Q3:What are file descriptors?
 When we open an existing file, the kernel returns a file descriptor to the process. To the kernel, all open files are referred to by File Descriptors. A file descriptor is a pointer that points to an entry in the file table, and the entry on the file table points to inode table. Inode table stores the memory location of files in the computer.
 
 Q4:What is the int status pointer passed into wait? When does wait fail?
+
 The information of how child process terminated will be stored in the memory address pointed by status pointer.(e.g. WIFEXITED(*status)) It can also be NULL if we don't care about the return status.
 Wait fails if
 (1) The process with pid does not exist or is not a child of the calling process.
